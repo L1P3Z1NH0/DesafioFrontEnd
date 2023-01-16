@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Preencha as informações do produto</h2>
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Nome:</mat-label>
+      <input [(ngModel)]="produto.nome" name="nome" matInput placeholder="Abacaxi" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Preço:</mat-label>
+      <span matPrefix>R$ &nbsp;</span>
+      <input [(ngModel)]="produto.preco" name="preco" matInput placeholder="22.50" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Descrição:</mat-label>
+      <textarea [(ngModel)]="produto.descricao" name="Descricao" placeholder="Abacaxi importado muito saboroso" matInput></textarea>
+    </mat-form-field>
+
+    <div class="buttons">
+      <button (click)="cancela()" mat-raised-button color="warn">Cancelar</button>
+      <button (click)="adicionaProduto()" mat-raised-button>Adicionar</button>
+    </div>
+  </form>
+</div>
